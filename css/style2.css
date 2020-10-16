@@ -1,0 +1,253 @@
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* line 52, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area {
+  padding-top: 200px;
+}
+
+@media (max-width: 767px) {
+  /* line 52, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+  .data_center_area {
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 52, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+  .data_center_area {
+    padding-top: 100px;
+  }
+}
+
+/* line 60, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location {
+  position: relative;
+}
+
+/* line 62, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 67, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span {
+  width: 10px;
+  height: 10px;
+  background: #670080;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* line 74, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(1) {
+  position: absolute;
+  left: 68.5%;
+  top: 60%;
+}
+
+/* line 78, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse1 2s infinite;
+}
+
+/* line 88, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(1):hover .address_on_hover {
+  opacity: 1;
+  visibility: visible;
+  top: -192px;
+}
+
+/* line 96, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(2) {
+  position: absolute;
+  left: 71%;
+  top: 49%;
+}
+
+/* line 100, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse2 2.1s infinite;
+}
+
+/* line 110, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(2):hover .address_on_hover {
+  opacity: 1;
+  visibility: visible;
+  top: -192px;
+}
+
+/* line 117, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(3) {
+  position: absolute;
+  left: 48.5%;
+  top: 43.5%;
+}
+
+/* line 121, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(3)::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse3 1.8s infinite;
+}
+
+/* line 131, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(3):hover .address_on_hover {
+  opacity: 1;
+  visibility: visible;
+  top: -192px;
+}
+
+/* line 138, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(4) {
+  position: absolute;
+  right: 34%;
+  bottom: 51%;
+}
+
+/* line 142, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(4)::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse4 2.4s infinite;
+}
+
+/* line 152, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(4):hover .address_on_hover {
+  opacity: 1;
+  visibility: visible;
+  top: -192px;
+}
+
+/* line 138, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(5) {
+  position: absolute;
+  left: 52%;
+  bottom: 15%;
+}
+
+/* line 142, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(5)::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse4 2.4s infinite;
+}
+
+/* line 152, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.data_center_area .location .pulse_group span:nth-child(5):hover .address_on_hover {
+  opacity: 1;
+  visibility: visible;
+  top: -192px;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@-webkit-keyframes pulse1 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(136, 108, 254, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px rgba(136, 108, 254, 0.8);
+  }
+}
+
+@-webkit-keyframes pulse2 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(136, 108, 254, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px rgba(136, 108, 254, 0.8);
+  }
+}
+
+@-webkit-keyframes pulse3 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(136, 108, 254, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px rgba(136, 108, 254, 0.8);
+  }
+}
+
+@-webkit-keyframes pulse4 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(136, 108, 254, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px rgba(136, 108, 254, 0.8);
+  }
+}
+
+/* line 199, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.address_on_hover {
+  width: 260px;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  top: -200px;
+  left: -136px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 16px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* line 213, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.address_on_hover .address_inner i {
+  color: #00D363;
+  font-size: 20px;
+}
+
+/* line 217, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.address_on_hover .address_inner h3 {
+  font-size: 18px;
+  color: #1F1F1F;
+}
+
+/* line 221, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.address_on_hover .address_inner p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* line 227, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_support.scss */
+.address_on_hover:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #fff transparent transparent transparent;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  bottom: -15px;
+  left: 50%;
+  transform: translateY(-50%);
+}
