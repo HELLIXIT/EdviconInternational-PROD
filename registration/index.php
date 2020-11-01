@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <?php
-  if(isset($_GET['tc'])){
+  if(isset($_GET['wc'])){
     session_start();
-    $_SESSION['check'] = "tr";
+    $_SESSION['check'] = "wr";
     header('location: ./validate/');
   }
 ?>
@@ -27,11 +27,15 @@
     	<div class="form-group mt-3">
         <div style="text-align: left;">
            <text><b>To proceed with the application process, follow the steps below.</b></text><br><br>
-           <text><b>01. Join Edvicon International Telegram channel for registration using below button.</b></text><br>
-           <text><b>02. Use the registration link mentioned in the channel.</b></text><br>
-           <text><b>03. Use the community invitation link to join Edvicon International Telegram Community.</b></text><br><br>
+           <text><b>01. Join Edvicon International WhatsApp group allocated to your country using below button.</b></text><br>
+           <text><b>02. Use the registration link mentioned in the group description.</b></text><br><br>
         </div>
-         <button onclick="window.location.href='https://t.me/EdviconEduRegistration'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">Join and Get Registration Link (Telegram)</button> 
+         <button onclick="window.location.href='https://chat.whatsapp.com/BTTM8BkpGEVLpT8NIVGUDO'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">Sri Lanka</button> 
+         <button onclick="window.location.href='https://chat.whatsapp.com/C8AU7AKLqciDUszpmjDmGI'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">Bangladesh</button> 
+         <button onclick="window.location.href='https://chat.whatsapp.com/HGEJA0PdHvXLt5yj1JmiO4'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">Tunisia</button> 
+         <button onclick="window.location.href='https://chat.whatsapp.com/CxgZVs3r6bm8oaMHGCsHb9'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">Pakistan</button> 
+         <button onclick="window.location.href='https://chat.whatsapp.com/Izxjv9VOJejEzgSX5wrTvb'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">South Africa</button> 
+         <button onclick="window.location.href='https://chat.whatsapp.com/IuVxvg4q7743l8WcyOPb8w'" class="button button-contactForm btn_1" style="background: skyblue; color: blue;">Other Countries</button> 
       </div>
     </div>
  </section>
