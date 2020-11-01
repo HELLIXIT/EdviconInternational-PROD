@@ -3,7 +3,7 @@
 <?php
   session_start();
   if(isset($_SESSION['check'])){
-    if($_SESSION['check'] != "tr"){
+    if($_SESSION['check'] != "wr"){
       header('location: ../');
     }
   }else{
