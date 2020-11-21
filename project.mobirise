@@ -40,10 +40,10 @@
         "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
       }
     ],
-    "favicon": "@PROJECT_PATH@/assets/images/favicon-667x667.svg",
+    "favicon": "@PROJECT_PATH@/assets/images/favicon-667x667-1.svg",
     "imageResize": false,
     "robotsSwitcher": true,
-    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n\n",
     "sitemapSwitcher": true,
     "siteUrl": "https://www.edvicon.org",
     "sitemapSwitcherAuto": "on",
@@ -63,7 +63,7 @@
     "uniqCompNum": 104,
     "versionPublish": "5.2.0",
     "screenshot": "screenshot.png",
-    "google-analytics": "<!--Start of Mouse click guard-->\n<script type=\"text/javascript\">\n        $(document).ready(function () {\n            //Disable cut copy paste\n            $('body').bind('cut copy paste selectstart', function (e) {\n                e.preventDefault();\n            });\n           \n            //Disable mouse right click\n            $(\"body\").on(\"contextmenu\",function(e){\n                return false;\n            });\n        });\n    </script>\n    <!--End of Mouse click guard-->\n\n    <!--Start of Tawk.to Script-->\n    <script type=\"text/javascript\">\n    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\n    (function(){\n    var s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];\n    s1.async=true;\n    s1.src='https://embed.tawk.to/5e807d6569e9320caabe2118/default';\n    s1.charset='UTF-8';\n    s1.setAttribute('crossorigin','*');\n    s0.parentNode.insertBefore(s1,s0);\n    })();\n    </script>\n    <!--End of Tawk.to Script-->"
+    "google-analytics": "<script type=\"text/javascript\">\n        $(document).ready(function () {\n            //Disable cut copy paste\n            $('body').bind('cut copy paste selectstart', function (e) {\n                e.preventDefault();\n            });\n           \n            //Disable mouse right click\n            $(\"body\").on(\"contextmenu\",function(e){\n                return false;\n            });\n        });\n    </script>\n    \n    <!--Start of Tawk.to Script-->\n    <script type=\"text/javascript\">\n    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\n    (function(){\n    var s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];\n    s1.async=true;\n    s1.src='https://embed.tawk.to/5e807d6569e9320caabe2118/default';\n    s1.charset='UTF-8';\n    s1.setAttribute('crossorigin','*');\n    s0.parentNode.insertBefore(s1,s0);\n    })();\n    </script>\n    <!--End of Tawk.to Script-->"
   },
   "pages": {
     "index.html": {
