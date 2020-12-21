@@ -1,9 +1,15 @@
 <!doctype html>
 <html lang="en">
 <?php
-  session_start();
+  if(isset($_GET['corplogin'])){
+    session_start();
+    $_SESSION['passed'] = "true";
+  }else{
+    session_start();
+  }
+
   if(isset($_SESSION['passed'])){
-    header('location: https://edvicon-my.sharepoint.com/:f:/g/personal/info_edvicon_org/Eib61Lt7XVpMgS4BG6pLv7EB8TVbxKXXIl5M3BnxdLGKFA');
+    header('location: ./Secured/');
   }else{
     header('location: ../../');
   }
