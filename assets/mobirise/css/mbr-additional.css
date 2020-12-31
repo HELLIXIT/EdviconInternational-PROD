@@ -1079,6 +1079,62 @@ a {
 .cid-sgXywhQcQn .mbr-section-title {
   color: #000000;
 }
+.cid-skLtIq8qBJ {
+  background-image: url("../../../assets/images/background3.jpg");
+}
+.cid-skLtIq8qBJ .number-wrap {
+  color: #ffffff;
+  text-align: center;
+}
+.cid-skLtIq8qBJ .number {
+  color: #ffffff;
+}
+.cid-skLtIq8qBJ .period {
+  display: block;
+}
+.cid-skLtIq8qBJ .dot {
+  display: none;
+}
+@media (max-width: 767px) {
+  .cid-skLtIq8qBJ .period {
+    font-size: 0.8rem;
+  }
+}
+.cid-skLtIq8qBJ .btn {
+  height: 100%;
+  margin: 0;
+}
+.cid-skLtIq8qBJ .mbr-section-btn {
+  margin-bottom: 1.2rem;
+}
+.cid-skLtIq8qBJ .mbr-section-title {
+  color: #ffffff;
+}
+.cid-skLtIq8qBJ .mbr-text {
+  color: #ffffff;
+}
+.cid-skLtIq8qBJ .icons-menu .soc-item {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.cid-skLtIq8qBJ .icons-menu .soc-item .mbr-iconfont {
+  font-size: 2rem;
+  display: flex;
+  border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  justify-content: center;
+  align-content: center;
+  transition: all 0.3s;
+}
+.cid-skLtIq8qBJ .icons-menu .soc-item .mbr-iconfont:before {
+  padding: 0.6rem;
+}
+.cid-skLtIq8qBJ .icons-menu .soc-item .mbr-iconfont:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 .cid-sgXzO8cfMm {
   padding-top: 4rem;
   padding-bottom: 1rem;
