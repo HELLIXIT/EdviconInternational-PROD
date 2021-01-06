@@ -3,7 +3,7 @@
 <?php
   session_start();
   if(isset($_SESSION['passed'])){
-    header('location: https://edvicon-my.sharepoint.com/:f:/g/personal/info_edvicon_org/Eib61Lt7XVpMgS4BG6pLv7EB8TVbxKXXIl5M3BnxdLGKFA');
+    header('location: https://edvicon-my.sharepoint.com/:f:/g/personal/info_edvicon_org/Eib61Lt7XVpMgS4BG6pLv7EBJk3GrkHO-w9vZZuSYAsTUA?e=Y95lqF');
   }else{
     header('location: ../../');
   }
