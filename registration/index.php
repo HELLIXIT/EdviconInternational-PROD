@@ -13,9 +13,9 @@
 
   if(isset($_SESSION['check'])){
     if($_SESSION['check'] == "lr"){
-      header('location: https://forms.gle/3wNoUCKCL83vY9Lh7');
+      header('location: https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u');
     }else if($_SESSION['check'] == "fr"){
-      header('location: https://forms.gle/AZapBTxz5RH7JaxN6');
+      header('location: https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u');
     }else{
       header('location: ../');
     }
@@ -23,8 +23,6 @@
     header('location: ../');
   }
 ?>
-
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body>
