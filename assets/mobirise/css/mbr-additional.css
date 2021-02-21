@@ -3620,8 +3620,13 @@ a {
 .cid-sgY35DFCPU .link-wrap {
   color: #ffffff;
 }
+.cid-spFeoAtTLq {
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+  background-color: #ffffff;
+}
 .cid-sgYfvE5CzL {
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
   background: #ffffff;
 }
@@ -4194,6 +4199,9 @@ a {
 }
 .cid-sgYilT0AWt .mbr-text,
 .cid-sgYilT0AWt .mbr-section-btn {
+  text-align: left;
+}
+.cid-sgYilT0AWt .mbr-section-title {
   text-align: left;
 }
 .cid-sgY3PlhftJ {
