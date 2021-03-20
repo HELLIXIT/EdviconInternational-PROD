@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^fr\.whatsappvalidation\.edvicon\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.fr\.whatsappvalidation\.edvicon\.org$
+RewriteRule ^/?$ "https\:\/\/www\.edvicon\.org\/registration\/index\.php\?fr\=true" [R=301,L]
+
