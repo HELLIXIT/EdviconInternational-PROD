@@ -1,6 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^whatsappvalidation\.edvicon\.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.whatsappvalidation\.edvicon\.org$
-RewriteRule ^/?$ "https\:\/\/www\.edvicon\.org\/" [R=301,L]
-
