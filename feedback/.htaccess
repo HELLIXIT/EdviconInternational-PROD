@@ -1,6 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^feedback\.edvicon\.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.feedback\.edvicon\.org$
-RewriteRule ^/?$ "https\:\/\/forms\.gle\/gk9Ym4oWXb81NVsQ6" [R=301,L]
-
