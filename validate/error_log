@@ -1,0 +1,2 @@
+[03-Oct-2020 09:17:49 UTC] PHP Warning:  fopen(https://docs.google.com/spreadsheets/d/e/2PACX-1vRG1zBfFALOUyniEgZd4AdKJiqNeuoTDTnyv8XwHbiwmG4WdqaRAoZIPRb7QAFNXnPH6tDxDZT3ErOH/pub?gid=1319707412&amp;single=true&amp;output=csv): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/edvicon/public_html/validate/certificate.php on line 264

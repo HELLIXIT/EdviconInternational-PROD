@@ -1,0 +1,21 @@
+RewriteEngine On
+
+RewriteBase /
+
+
+
+RewriteCond %{HTTPS} !=on
+
+RewriteCond %{HTTP_HOST} ^validate\.edvicon\.org$ [OR]
+
+RewriteCond %{HTTP_HOST} ^www\.edvicon\.org/validate$
+
+RewriteRule .* https://www.validate.edvicon.org%{REQUEST_URI} [R=301,L]
+
+
+
+RewriteCond %{HTTPS} =on
+
+RewriteCond %{HTTP_HOST} ^validate\.edvicon\.org$
+
+RewriteRule .* https://www.validate.edvicon.org%{REQUEST_URI} [R=301,L]
