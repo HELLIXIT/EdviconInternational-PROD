@@ -5,7 +5,9 @@
 	if($varPIN = $_GET['pn']){} else{header("Location: ../"); exit();}
 	if($varDate = $_GET['io']){} else{header("Location: ../"); exit();}
 ?>
-
+<head>
+    <title>NYPL Provided by HELLIX IT</title>
+</head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <table border="0" style="border-collapse: collapse; background-image:url(https://raw.githubusercontent.com/EdviconAdmin/resources-internal-use/main/New_York_Public_Library_Card/New_York_Public_Library_card_by_HELLIX_IT.jpg); border:none; background-size:100% auto; margin:0px; color: white; font-size:1.5vw">
     <tr>
