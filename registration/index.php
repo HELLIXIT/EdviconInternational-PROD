@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <?php
-  ob_start();
   //session_start();
   if(isset($_GET['lr'])){
     $_SESSION['check'] = "lr";
@@ -11,20 +10,23 @@
 
   if(isset($_SESSION['check'])){
     if($_SESSION['check'] == "lr"){
-      header('location: https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u');
-      exit();
+      echo "<script>location.href='https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u';</script>";
+      //header('location: https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u');
+      //exit();
     }else if($_SESSION['check'] == "fr"){
-      header('location: https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u');
-      exit();
+      echo "<script>location.href='https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u';</script>";
+      //header('location: https://forms.office.com/Pages/ResponsePage.aspx?id=IVnGy3moa0KZFuBhG2D75TfVxligsdRKttmwZwrSIBNUOTVWTFRJU0I2QjFOVUdITzAxNE1DV0Y5Ui4u');
+      //exit();
     }else{
-      header('location: ../');
-      exit();
+      echo "<script>location.href='../';</script>";
+      //header('location: ../');
+      //exit();
     }
   }else{
-    header('location: ../');
-    exit();
+    echo "<script>location.href='../';</script>";
+    //header('location: ../');
+    //exit();
   }
-  ob_end_flush();
 ?>
 </head>
 
