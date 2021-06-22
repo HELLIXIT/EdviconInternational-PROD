@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php
-//ob_start();
+  ob_start();
   //session_start();
   if(isset($_GET['lr'])){
     $_SESSION['check'] = "lr";
@@ -24,6 +24,7 @@
     header('location: ../');
     exit();
   }
+  ob_end_flush();
 ?>
 </head>
 
