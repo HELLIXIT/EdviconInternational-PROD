@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php
+//ob_start();
   //session_start();
   if(isset($_GET['lr'])){
     $_SESSION['check'] = "lr";
