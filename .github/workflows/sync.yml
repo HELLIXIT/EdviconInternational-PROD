@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      - PROD-HellixIT
+      - PROD-EdviconInternational
     paths-ignore:
       - sync.yml
       - ^CNAME$
