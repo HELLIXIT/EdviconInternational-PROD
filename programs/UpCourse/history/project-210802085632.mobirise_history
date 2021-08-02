@@ -56,8 +56,7 @@
     "gdpr": false,
     "pwa-switcher": false,
     "uniqCompNum": 1,
-    "versionPublish": "5.3.10",
-    "screenshot": "screenshot.png"
+    "versionPublish": "5.3.10"
   },
   "pages": {
     "index.html": {
