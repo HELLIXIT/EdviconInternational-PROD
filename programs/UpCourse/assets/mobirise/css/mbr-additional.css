@@ -1084,6 +1084,60 @@ a {
 .cid-svGO3o7YHJ .title-col {
   width: 100%;
 }
+.cid-sJW19XpvSB {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-color: #f2f3f7;
+}
+.cid-sJW19XpvSB img {
+  width: 150px;
+  margin: auto;
+  background: white;
+  height: 150px;
+  border-radius: 50%;
+  padding: 1rem;
+  object-fit: contain;
+}
+.cid-sJW19XpvSB .card {
+  transition: all 0.3s;
+  height: fit-content;
+  padding: 1rem 0;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+.cid-sJW19XpvSB .row {
+  border-radius: 3rem;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  padding: 2rem;
+  margin: 0;
+}
+.cid-sJW372Sph1 {
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+  background-color: #f2f3f7;
+}
+.cid-sJW372Sph1 img {
+  width: 150px;
+  margin: auto;
+  background: white;
+  height: 150px;
+  border-radius: 50%;
+  padding: 1rem;
+  object-fit: contain;
+}
+.cid-sJW372Sph1 .card {
+  transition: all 0.3s;
+  height: fit-content;
+  padding: 1rem 0;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+.cid-sJW372Sph1 .row {
+  border-radius: 3rem;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  padding: 2rem;
+  margin: 0;
+}
 .cid-svGOrpYd1R {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1306,7 +1360,7 @@ a {
 }
 .cid-sJshKyWjY4 {
   padding-top: 0rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
   background-color: #f2f3f7;
 }
 .cid-sJshKyWjY4 .title {
@@ -1370,6 +1424,72 @@ a {
 .cid-sJshKyWjY4 .card-title {
   color: #36187d;
 }
+.cid-sJVZUBL0aj {
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  background-color: #f2f3f7;
+}
+.cid-sJVZUBL0aj .title {
+  padding: 0 2rem;
+  color: #36187d;
+}
+.cid-sJVZUBL0aj .card-wrapper {
+  overflow: visible;
+  display: flex;
+  padding: 3rem 4rem;
+  border-radius: 3rem;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  margin-bottom: 4rem;
+}
+@media (max-width: 767px) {
+  .cid-sJVZUBL0aj .card-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+.cid-sJVZUBL0aj .mbr-iconfont {
+  font-size: 2.5rem;
+  color: #0196e3;
+  padding: 2rem;
+  padding-top: 2.2rem;
+  cursor: pointer;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.cid-sJVZUBL0aj .mbr-iconfont:hover {
+  background: #f8f9fb;
+}
+.cid-sJVZUBL0aj img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+}
+.cid-sJVZUBL0aj .card-box {
+  margin: auto;
+  padding-left: 3rem;
+}
+@media (max-width: 767px) {
+  .cid-sJVZUBL0aj .card-box {
+    padding-left: 0;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .cid-sJVZUBL0aj .mt-5 {
+    margin-top: 0.5rem!important;
+  }
+}
+.cid-sJVZUBL0aj .card-text {
+  color: #6c758f;
+}
+.cid-sJVZUBL0aj .card-title {
+  color: #36187d;
+}
 .cid-svGOGU5IZ2 {
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -1417,36 +1537,6 @@ a {
   color: #6c758f;
 }
 .cid-svGOGU5IZ2 H3 {
-  color: #36187d;
-}
-.cid-svGOz5Sywu {
-  padding-top: 6rem;
-  padding-bottom: 3rem;
-  background-color: #f2f3f7;
-}
-.cid-svGOz5Sywu img {
-  width: 150px;
-  margin: auto;
-  background: white;
-  height: 150px;
-  border-radius: 50%;
-  padding: 1rem;
-  object-fit: contain;
-}
-.cid-svGOz5Sywu .card {
-  transition: all 0.3s;
-  height: fit-content;
-  padding: 1rem 0;
-  opacity: 0.7;
-  margin-bottom: 1rem;
-}
-.cid-svGOz5Sywu .row {
-  border-radius: 3rem;
-  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
-  padding: 2rem;
-  margin: 0;
-}
-.cid-svGOz5Sywu .mbr-section-title {
   color: #36187d;
 }
 .cid-svMHuAElzZ {
@@ -1882,6 +1972,36 @@ a {
 }
 .cid-sJ3a3T9MgC .icons-menu .mbr-iconfont:hover {
   background: #f8f9fb;
+}
+.cid-sJW2AHpRiA {
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  background-color: #f2f3f7;
+}
+.cid-sJW2AHpRiA img {
+  width: 150px;
+  margin: auto;
+  background: white;
+  height: 150px;
+  border-radius: 50%;
+  padding: 1rem;
+  object-fit: contain;
+}
+.cid-sJW2AHpRiA .card {
+  transition: all 0.3s;
+  height: fit-content;
+  padding: 1rem 0;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+.cid-sJW2AHpRiA .row {
+  border-radius: 3rem;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  padding: 2rem;
+  margin: 0;
+}
+.cid-sJW2AHpRiA .mbr-section-title {
+  color: #36187d;
 }
 .cid-sJ3aQtzZbf {
   padding-top: 7rem;
