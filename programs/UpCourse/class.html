@@ -23,7 +23,20 @@
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>​​​​​​​
+<script type="text/javascript">
+        $(document).ready(function () {
+            //Disable cut copy paste
+            $('body').bind('cut copy paste selectstart', function (e) {
+                e.preventDefault();
+            });
+           
+            //Disable mouse right click
+            $("body").on("contextmenu",function(e){
+                return false;
+            });
+        });
+    </script>
   
 <meta name="theme-color" content="#ff8a8a">
 <link rel="manifest" href="manifest.json">
@@ -41,6 +54,24 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
+
+<!-- Analytics -->
+<script async src="https://arc.io/widget.min.js#fr299eD2"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162773642-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162773642-1');
+</script>
+
+
+<!-- /Analytics -->
+
+
   
   <section class="menu menu1 cid-sJ3a3T9MgC" once="menu" id="menu1-2">
     
