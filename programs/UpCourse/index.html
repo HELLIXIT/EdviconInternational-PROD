@@ -29,7 +29,20 @@
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>​​​​​​​
+<script type="text/javascript">
+        $(document).ready(function () {
+            //Disable cut copy paste
+            $('body').bind('cut copy paste selectstart', function (e) {
+                e.preventDefault();
+            });
+           
+            //Disable mouse right click
+            $("body").on("contextmenu",function(e){
+                return false;
+            });
+        });
+    </script>
   
 <meta name="theme-color" content="#ff8a8a">
 <link rel="manifest" href="manifest.json">
