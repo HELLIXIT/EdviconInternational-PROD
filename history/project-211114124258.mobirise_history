@@ -6647,6 +6647,425 @@
         {
           "alias": false,
           "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            "overflow": "hidden",
+            "box-sizing": "border-box",
+            ".mbr-gallery-filter": {
+              "text-align": "left",
+              "ul": {
+                "position": "relative",
+                "@media (min-width: 768px)": {
+                  "margin": "5px 0 60px",
+                  "padding-left": "190px",
+                  "&:before": {
+                    "content": "\"\"",
+                    "width": "150px",
+                    "height": "2px",
+                    "position": "absolute",
+                    "top": "20px",
+                    "left": "0",
+                    "background": "@warningColor"
+                  }
+                },
+                "li": {
+                  "padding": "0",
+                  "a.btn": {
+                    "border": "none !important",
+                    "margin": "0",
+                    "font-size": "24px",
+                    "min-width": "auto !important",
+                    "background": "transparent !important",
+                    "box-shadow": "none",
+                    "@media (max-width: 767px)": {
+                      "margin-right": "35px"
+                    },
+                    "&:before": {
+                      "background": "transparent !important"
+                    },
+                    "&:hover": {
+                      "background-color": "transparent !important",
+                      "color": "@warningColor !important"
+                    }
+                  },
+                  "&.active .btn": {
+                    "background-color": "transparent !important",
+                    "color": "@warningColor !important"
+                  }
+                }
+              }
+            },
+            ".mbr-gallery-item > div": {
+              "overflow": "hidden",
+              "img": {
+                "height": "420px",
+                "width": "100%",
+                "object-fit": "cover",
+                "transition": "all 0.3s ease-in-out"
+              },
+              ".icon-focus": {
+                "top": "auto",
+                "bottom": "0",
+                "left": "50%",
+                "transform": "translateX(-50%)",
+                "font-size": "30px !important",
+                "transition": "all 0.3s ease-in-out",
+                "font-family": "\"FontAwesome\" !important",
+                "&:before": {
+                  "content": "\"\\f00e\""
+                }
+              },
+              "&:after": {
+                "content": "\"\"",
+                "position": "absolute",
+                "top": "30px",
+                "right": "30px",
+                "bottom": "30px",
+                "left": "30px",
+                "opacity": "0",
+                "border": "1px solid #fff",
+                "z-index": "2",
+                "transition": "0.5s opacity ease-in-out"
+              }
+            },
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b",
+              "border-radius": "0"
+            },
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem"
+            },
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem"
+            },
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-gallery-item > div::before": {
+              "content": "\"\"",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "width": "100%",
+              "height": "100%",
+              "background": "@overlayColor",
+              "opacity": "0",
+              "z-index": "2",
+              "-webkit-transition": "0.3s opacity ease-in-out",
+              "transition": "0.3s opacity ease-in-out",
+              "& when (@gradOverlay)": {
+                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+              }
+            },
+            ".mbr-gallery-item > div > span": {
+              "color": "contrast(@overlayColor)"
+            },
+            ".mbr-gallery-item > div:hover": {
+              ".mbr-gallery-title::before": {
+                "background": "transparent !important"
+              },
+              "&:after": {
+                "opacity": "1"
+              },
+              "&:before": {
+                "opacity": "@overlayOpacity !important"
+              },
+              "img": {
+                "transform": "scale3d(1.1, 1.1, 1)"
+              },
+              ".icon-focus": {
+                "bottom": "33%",
+                "& when not (@gallery__showText)": {
+                  "bottom": "50%"
+                }
+              },
+              ".mbr-gallery-title": {
+                "display": "block",
+                "opacity": "1",
+                "position": "absolute",
+                "width": "100%",
+                "bottom": "40%",
+                "padding": "35px",
+                "font-weight": "500",
+                "text-align": "center",
+                "z-index": "5",
+                "transition": "bottom 0.3s ease-in-out",
+                "&:before": {
+                  "content": "\"\"",
+                  "width": "100%",
+                  "height": "100%",
+                  "top": "0",
+                  "left": "0",
+                  "z-index": "-1",
+                  "position": "absolute",
+                  "background": "transparent",
+                  "transition": "0.3s background ease-in-out"
+                }
+              }
+            },
+            ".mbr-gallery-title": {
+              "opacity": "0",
+              "left": "0",
+              "bottom": "0",
+              "position": "absolute"
+            },
+            ".modal-body .close": {
+              "top": "0",
+              "right": "0",
+              "border-radius": "0",
+              "font-size": "16px",
+              "line-height": "40px",
+              "width": "40px",
+              "height": "40px"
+            }
+          },
+          "_name": "gallery1",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel gallery gallery1 modernm4_gallery1\" group=\"Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo, font-awesome\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" inline>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <header>Gallery</header>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#233d63\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#bf6cff\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" inline>\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-bullets mbr-gallery-show-text mbr-gallery-show-filter></div>\n    </div>\n\n</section>",
+          "_cid": "sugsHFKy1j",
+          "_anchor": "gallery1-63",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-4",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "Executives",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/download-78.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/download-78-600x600.jpeg",
+                "alt": "Nimesh Ekanayake",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Nimesh Ekanayake<br>Founder/Chairperson<br>",
+                "active": false
+              },
+              {
+                "tags": "Executives",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ravindu-miyuranga.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/ravindu-miyuranga-738x738.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Ravindu Miyuranga<br>CEO",
+                "active": false
+              },
+              {
+                "tags": "Executives",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/savindu-bandara.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/savindu-bandara-784x784.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Savindu Bandara<br>Director IT<br>",
+                "active": false
+              },
+              {
+                "tags": "Executives",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/whatsapp-image-2021-05-30-at-8.41.27-am.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/whatsapp-image-2021-05-30-at-8.41.27-am-800x800.jpeg",
+                "alt": "Mihiri Wimalasena",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Mihiri Wimalasena<br>Director Admin and HR<br>",
+                "active": false
+              },
+              {
+                "tags": "Administration and HR",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ruchira-perera.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/ruchira-perera-294x294.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Ruchira Perera<br>Manager Public Relations<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/anupa-ranasinghe.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/anupa-ranasinghe-800x800.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Anupa Ranasinghe<br>Manager IT<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/sara-kareem.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/sara-kareem-720x720.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Sara Kareem<br>Content Writer<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/dushan-herath.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/dushan-herath-800x800.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Dushan Herath<br>Manager Social Media<br>",
+                "active": false
+              },
+              {
+                "tags": "Programs and Services",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/jonayed-tanjim-bangladesh.png",
+                "thumb": "@PROJECT_PATH@/assets/images/jonayed-tanjim-bangladesh-500x500.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Jonayed Tanjim<br>Country Program Manager - International<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/malith-ileperuma.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/malith-ileperuma-800x800.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Malith Ileperuma<br>Manager Front-end Development<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ruwinika-rodrigo.png",
+                "thumb": "@PROJECT_PATH@/assets/images/ruwinika-rodrigo-430x430.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Ruwinika Rodrigo<br>Graphic Designer<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/sathsara-thalawattha.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/sathsara-thalawattha-673x673.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Sathsara Thalawattha<br>Graphic Designer<br>",
+                "active": false
+              },
+              {
+                "tags": "Administration and HR",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/mayumi-kashmika.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/mayumi-kashmika-768x1024.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Mayumi Kashmika<br>Assistant Human Resources Manager&nbsp;<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/vidyani-gunarathne.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/vidyani-gunarathne-483x434.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Vidyani Gunarathne<br>Content Writer<br>",
+                "active": false
+              },
+              {
+                "tags": "Executives",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/malsha-gimhani.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/malsha-gimhani-800x1067.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Malsha Gimhani<br>Executive Secretary<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/tharsh.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/tharsh-461x692.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Tharsha Solomon\n<br>System Administrator&nbsp;<br>",
+                "active": false
+              },
+              {
+                "tags": "Information Technology",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/sandalu-adhasooriya.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/sandalu-adhasooriya-800x1200.jpeg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Sandalu Adhasooriya<br>Global Support Specialist&nbsp;<br>",
+                "active": true
+              }
+            ]
+          }
+        },
+        {
+          "alias": false,
+          "_styles": {
             "& when not (@sticky)": {
               ".navbar-dropdown": {
                 "position": "relative !important"
@@ -7076,7 +7495,7 @@
         },
         {
           "_name": "gallery02",
-          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"8\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#57468b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"1\" mbr-gallery-show-text mbr-gallery-show-filter></div>\n    </div>\n\n</section>",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#57468b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"1\" mbr-gallery-show-text mbr-gallery-show-filter></div>\n    </div>\n\n</section>",
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
@@ -7184,7 +7603,6 @@
             }
           },
           "_cid": "sOIysXP1Vs",
-          "_anchor": "gallery02-7w",
           "_protectedParams": [
             "text_all",
             "gallery__filtersTextStyle",
@@ -7290,7 +7708,20 @@
                 "active": false
               },
               {
-                "tags": "Information Technology",
+                "tags": "Admin and HR",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/sara-kareem-1.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/sara-kareem-1-575x575.jpeg",
+                "alt": "Sara Kareem",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Sara Kareem\n<br>Content Writer<br>",
+                "active": false
+              },
+              {
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -7299,11 +7730,11 @@
                 "alt": "Dushan Herath",
                 "title": "",
                 "customStyle1": "display-7",
-                "caption": "Dushan Herath\n<br>Senior Social Media Coordinator<br>",
+                "caption": "Dushan Herath\n<br>Manager Social Media<br>",
                 "active": false
               },
               {
-                "tags": "Programs and Services",
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -7320,55 +7751,16 @@
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/mayumi-kashmika-1.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/mayumi-kashmika-1-768x768.jpeg",
-                "alt": "Mayumi Kashmika",
+                "image": "@PROJECT_PATH@/assets/images/malith-ileperuma-1.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/malith-ileperuma-1-800x800.jpeg",
+                "alt": "Malith Ileperuma",
                 "title": "",
                 "customStyle1": "display-7",
-                "caption": "Mayumi Kashmika\n<br>Assistant Human Resources Manager<br>",
+                "caption": "Malith Ileperuma\n<br>Graphic Designer",
                 "active": false
               },
               {
-                "tags": "Programs and Services",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/udith-indrakantha.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/udith-indrakantha-800x800.jpeg",
-                "alt": "Udith Indrakantha",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Induwara Rupasinghe\n<br>Program Coordinator - Local<br>",
-                "active": true
-              },
-              {
-                "tags": "Information Technology",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/sara-kareem-1.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/sara-kareem-1-575x575.jpeg",
-                "alt": "Sara Kareem",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Sara Kareem\n<br>Lead Content Writer<br>",
-                "active": false
-              },
-              {
-                "tags": "Information Technology",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/sathsara-thalawattha-1.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/sathsara-thalawattha-1-726x726.jpeg",
-                "alt": "Sathsara Thalawattha",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Sathsara Thalawattha\n<br>Graphic Designer<br>",
-                "active": false
-              },
-              {
-                "tags": "Information Technology",
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -7381,20 +7773,33 @@
                 "active": false
               },
               {
-                "tags": "Information Technology",
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/malith-ileperuma-1.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/malith-ileperuma-1-800x800.jpeg",
-                "alt": "Malith Ileperuma",
+                "image": "@PROJECT_PATH@/assets/images/sathsara-thalawattha-1.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/sathsara-thalawattha-1-726x726.jpeg",
+                "alt": "Sathsara Thalawattha",
                 "title": "",
                 "customStyle1": "display-7",
-                "caption": "Malith Ileperuma\n<br>Graphic Designer",
+                "caption": "Sathsara Thalawattha\n<br>Graphic Designer<br>",
                 "active": false
               },
               {
-                "tags": "Information Technology",
+                "tags": "Admin and HR",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/mayumi-kashmika-1.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/mayumi-kashmika-1-768x768.jpeg",
+                "alt": "Mayumi Kashmika",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Mayumi Kashmika\n<br>Assistant Human Resources Manager<br>",
+                "active": false
+              },
+              {
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -7404,10 +7809,10 @@
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Vidyani Gunarathne\n<br>Content Writer<br>",
-                "active": false
+                "active": true
               },
               {
-                "tags": "Information Technology",
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -7420,7 +7825,7 @@
                 "active": false
               },
               {
-                "tags": "Information Technology",
+                "tags": "Admin and HR",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
@@ -7430,19 +7835,6 @@
                 "title": "",
                 "customStyle1": "display-7",
                 "caption": "Sandalu Adhasooriya\n<br>Global Support Specialist<br>",
-                "active": false
-              },
-              {
-                "tags": "Programs and Services",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/induwara-rupasinghe.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/induwara-rupasinghe-800x800.jpeg",
-                "alt": "Induwara Rupasinghe",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Induwara Rupasinghe\n<br>Program Coordinator - Local<br>",
                 "active": false
               },
               {
@@ -7457,9 +7849,23 @@
                 "customStyle1": "display-7",
                 "caption": "Umang Thakkar\n<br>Intern Content Writer<br>",
                 "active": false
+              },
+              {
+                "tags": "Admin and HR",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/induwara-rupasinghe.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/induwara-rupasinghe-800x800.jpeg",
+                "alt": "Induwara Rupasinghe",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Induwara Rupasinghe\n<br>Program Coordinator - Local<br>",
+                "active": false
               }
             ]
-          }
+          },
+          "_anchor": "gallery02-7w"
         },
         {
           "alias": false,
