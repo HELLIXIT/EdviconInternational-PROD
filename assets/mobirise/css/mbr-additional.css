@@ -9416,7 +9416,7 @@ a {
   color: #0196e3;
 }
 .cid-sE3nQEUJZu .card-title {
-  color: #ea2396;
+  color: #ff6666;
 }
 .cid-sE3nQEUJZu .card-wrapper {
   overflow: visible;
@@ -9457,6 +9457,9 @@ a {
   .cid-sE3nQEUJZu .mt-5 {
     margin-top: 0.5rem!important;
   }
+}
+.cid-sE3nQEUJZu .card-text {
+  text-align: left;
 }
 .cid-sE3mIlSyBP {
   padding-top: 5rem;
