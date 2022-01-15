@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Edvicon International",
-    "currentPage": "team.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -91,7 +91,9 @@
     },
     "cssOptimize": false,
     "lazyLoad": false,
-    "pwa-switcher": false
+    "pwa-switcher": false,
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
@@ -7336,7 +7338,7 @@
                 "alt": "Udith Indrakantha",
                 "title": "",
                 "customStyle1": "display-7",
-                "caption": "Udith Indrakantha<br>CPM - Local<br>",
+                "caption": "Induwara Rupasinghe\n<br>Program Coordinator - Local<br>",
                 "active": true
               },
               {
